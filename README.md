@@ -1,38 +1,20 @@
-# O Guia Chocolates — Investor Marketing Site
+# O’GUIA Chocolates — Stitch-inspired marketing site
 
-Next.js 15 App Router / TypeScript / Tailwind CSS v4 single-page investor and marketing landing page inspired by the Stitch **O Guia Chocolates by DADs Farm** design direction.
+This is a responsive Next.js App Router implementation based on the supplied Google Stitch screenshot.
 
-## Run
+## Files
+- `src/app/page.tsx` — landing page and interactive FAQ/inquiry form
+- `src/app/globals.css` — responsive design system and styling
+- `src/app/layout.tsx` — SEO metadata, Open Graph, Twitter cards
+- `public/images/farm-hero.jpg` — image crop sourced from the supplied design screenshot
 
+## Apply to the existing repository
+Copy these files into the matching paths in `roydepon17-prog/oguiachoco`, replacing the existing files. Keep the existing `package.json` and other project configuration.
+
+## Run locally
 ```bash
 npm install
 npm run dev
 ```
 
-Then open http://localhost:3000.
-
-## Production
-
-```bash
-npm run build
-npm start
-```
-
-## Design system
-
-- Warm parchment: `#FDFBF7`
-- Cream: `#F7F3EB`
-- Cocoa: `#241611`
-- Forest: `#2D4A3E`
-- Gold: `#C5A059`
-- Display type: Georgia / editorial serif
-- Body type: Arial / system sans
-- Rounded 9–28px cards and restrained gold accents
-
-## SEO
-
-Includes canonical metadata, Open Graph/Twitter metadata, robots, sitemap, semantic headings, accessible navigation, image alt text and Organization/WebSite/LocalBusiness JSON-LD.
-
-## Important
-
-Investor figures are explicitly placeholders. Replace all illustrative TAM/SAM/SOM, factory, production, revenue and capital figures with verified data before using this page for investor communications.
+The inquiry form currently provides a front-end confirmation only. Connect it to an email service or CRM before production use. The farm photo is a screenshot-derived placeholder; replace it with a full-resolution approved farm photograph before launch.
