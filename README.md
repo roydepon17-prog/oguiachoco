@@ -1,20 +1,22 @@
-# O’GUIA Chocolates — Stitch-inspired marketing site
+# O'GUIA Chocolates — Next.js Marketing Website
 
-This is a responsive Next.js App Router implementation based on the supplied Google Stitch screenshot.
+Responsive artisan chocolate marketing site inspired by the supplied Google Stitch project.
 
-## Files
-- `src/app/page.tsx` — landing page and interactive FAQ/inquiry form
-- `src/app/globals.css` — responsive design system and styling
-- `src/app/layout.tsx` — SEO metadata, Open Graph, Twitter cards
-- `public/images/farm-hero.jpg` — image crop sourced from the supplied design screenshot
+## Run
 
-## Apply to the existing repository
-Copy these files into the matching paths in `roydepon17-prog/oguiachoco`, replacing the existing files. Keep the existing `package.json` and other project configuration.
-
-## Run locally
 ```bash
 npm install
 npm run dev
 ```
 
-The inquiry form currently provides a front-end confirmation only. Connect it to an email service or CRM before production use. The farm photo is a screenshot-derived placeholder; replace it with a full-resolution approved farm photograph before launch.
+## Included
+- Next.js App Router + TypeScript
+- Responsive mobile/tablet/desktop layout
+- Semantic sections and internal anchor navigation
+- Metadata, Open Graph, canonical URL, robots and sitemap
+- JSON-LD brand structured data
+- Accessible navigation and CTA links
+- CSS-only product/hero artwork so the site runs without missing image assets
+
+## Before launch
+Replace `https://oguiachocolates.com` in `app/layout.tsx`, `app/robots.ts`, and `app/sitemap.ts` if the production domain differs. Add final brand/product photography under `public/` and use `next/image` for those assets.
