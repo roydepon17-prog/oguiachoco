@@ -2,16 +2,20 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://oguiachocolates.com"),
-  title: { default: "O Guia Chocolates by DADs Farm | Philippine Cacao, Bean-to-Bar & Farm-to-Table", template: "%s | O Guia Chocolates" },
-  description: "O Guia Chocolates by DADs Farm is a Philippine cacao and bean-to-bar chocolate venture rooted in Old Guia, Ma-ayon, Capiz—connecting regenerative farming, post-harvest craftsmanship and premium Filipino chocolate.",
-  keywords: ["O Guia Chocolates","OGUIA Chocolates","DADs Farm","Philippine cacao","Capiz cacao","Ma-ayon cacao","Filipino chocolate","bean-to-bar chocolate Philippines","tablea Philippines","farm to bar chocolate","Philippine cacao investment"],
+  metadataBase: new URL("https://www.oguiachocs.com"),
+  title: { default: "O'Guia Chocolates by DAD's Farm | Tree-to-Bar Cacao from Capiz", template: "%s | O'Guia Chocolates" },
+  description: "O'Guia Chocolates by DAD's Farm creates farm-to-table, tree-to-bar chocolate from cacao grown and crafted in Maayon, Capiz, Philippines.",
+  keywords: ["O'Guia Chocolates","DAD's Farm","Philippine cacao","Capiz chocolate","Maayon cacao","tree-to-bar chocolate","farm-to-table chocolate","tablea"],
   alternates: { canonical: "/" },
-  openGraph: { type: "website", locale: "en_PH", siteName: "O Guia Chocolates by DADs Farm", url: "/", title: "From our farm in Capiz to the world.", description: "A farm-connected Philippine cacao and chocolate story—built around soil health, local value creation and O Guia Chocolates.", images: [{ url: "/oguia-logo.webp", width: 225, height: 240, alt: "O Guia Chocolates by DADs Farm logo" }] },
-  twitter: { card: "summary_large_image", title: "O Guia Chocolates by DADs Farm", description: "Philippine cacao, bean-to-bar chocolate and a diversified farm-to-table model.", images: ["/oguia-logo.webp"] },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } }
+  openGraph: { type: "website", locale: "en_PH", url: "/", siteName: "O'Guia Chocolates", title: "O'Guia Chocolates by DAD's Farm", description: "Tree-to-bar chocolate rooted in a living farm ecosystem in Maayon, Capiz.", images: [{ url: "/farm-hero.jpg", width: 1200, height: 630, alt: "Cacao at DAD's Farm in Maayon, Capiz" }] },
+  twitter: { card: "summary_large_image", title: "O'Guia Chocolates by DAD's Farm", description: "Tree-to-bar chocolate from Maayon, Capiz.", images: ["/farm-hero.jpg"] },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({children}:{children:React.ReactNode}){
-  return <html lang="en-PH"><body>{children}</body></html>;
+const jsonLd = {
+  "@context":"https://schema.org","@type":"Organization","name":"O'Guia Chocolates by DAD's Farm","url":"https://www.oguiachocs.com","logo":"https://www.oguiachocs.com/oguia-logo.webp","description":"Tree-to-bar and farm-to-table chocolate from Maayon, Capiz, Philippines.","address":{"@type":"PostalAddress","addressLocality":"Maayon","addressRegion":"Capiz","addressCountry":"PH"}
+};
+
+export default function RootLayout({children}:{children:React.ReactNode}) {
+  return <html lang="en"><head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(jsonLd)}} /></head><body>{children}</body></html>;
 }
